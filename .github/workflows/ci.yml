@@ -23,7 +23,6 @@ jobs:
       TOSS_SECRET_KEY: ${{ secrets.TOSS_SECRET_KEY }}
       TOSS_CLIENT_KEY: ${{ secrets.TOSS_CLIENT_KEY }}
       TOSS_URL : ${{ secrets.TOSS_URL }}
-      JWT_SECRET_KEY : ${{secrets.JWT_SECRET_KEY}}
     steps:
     - name: Checkout
       uses: actions/checkout@v4
