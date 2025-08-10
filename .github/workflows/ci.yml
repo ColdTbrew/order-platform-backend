@@ -19,7 +19,6 @@ jobs:
       SPRING_REDIS_PORT: 6379
       SPRING_MAIN_ALLOW_BEAN_DEFINITION_OVERRIDING: true
       REDIS_PASSWORD: ''
-      REDIS_REFUND_QUEUE: 'refund-queue-test'
     steps:
     - name: Checkout
       uses: actions/checkout@v4
