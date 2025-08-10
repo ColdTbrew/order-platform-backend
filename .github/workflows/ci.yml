@@ -42,7 +42,7 @@ jobs:
     - name: Build with Gradle
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      run: ./gradlew test --tests "app.unit.domain.cart.service.CartRedisServiceTest" --stacktrace --info -Dspring.data.redis.port=6379 -Dspring.data.redis.host=localhost
+      run: ./gradlew test --tests "app.unit.domain.cart.service.CartRedisServiceTest" --stacktrace -Dspring.data.redis.port=6379 -Dspring.data.redis.host=localhost
 
     - name: Publish Test Results
       if: always()
