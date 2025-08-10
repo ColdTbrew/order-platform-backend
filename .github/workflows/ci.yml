@@ -17,7 +17,6 @@ jobs:
       SPRING_DATASOURCE_PASSWORD: ''
       SPRING_REDIS_HOST: localhost
       SPRING_REDIS_PORT: 6379
-      SPRING_MAIN_ALLOW_BEAN_DEFINITION_OVERRIDING: true
     steps:
     - name: Checkout
       uses: actions/checkout@v4
