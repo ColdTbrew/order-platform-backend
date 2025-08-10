@@ -1,9 +1,9 @@
 # Stage 1: Build the application
 FROM gradle:jdk17 AS builder
 WORKDIR /home/gradle/src
-COPY --chown=gradle:gradle ../cicd/build.gradle settings.gradle ./
-COPY --chown=gradle:gradle ../cicd/gradle ./gradle
-COPY --chown=gradle:gradle ../cicd/src ./src
+COPY --chown=gradle:gradle build.gradle settings.gradle ./
+COPY --chown=gradle:gradle gradle ./gradle
+COPY --chown=gradle:gradle src ./src
 RUN ./gradlew build -x test
 
 # Stage 2: Create the final, lightweight image
