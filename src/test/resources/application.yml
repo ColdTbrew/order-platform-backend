@@ -7,6 +7,11 @@ spring:
     openai:
       enabled: false
       api-key: test-api-key
+  toss:
+    client-key: ${TOSS_CLIENT_KEY}
+    secret-key: ${TOSS_SECRET_KEY}
+    url: ${TOSS_URL}
+
 
 redis:
   refund-queue: refund-queue-test
