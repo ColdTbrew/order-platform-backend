@@ -1,4 +1,6 @@
 spring:
+  config:
+    import: optional:file:.env[.properties]
   data:
     redis:
       host: localhost
@@ -7,11 +9,10 @@ spring:
     openai:
       enabled: false
       api-key: test-api-key
-  toss:
-    client-key: ${TOSS_CLIENT_KEY}
-    secret-key: ${TOSS_SECRET_KEY}
-    url: ${TOSS_URL}
 
+REDIS_REFUND_QUEUE: refund-queue-test
 
-redis:
-  refund-queue: refund-queue-test
+jwt:
+  secret: ${JWT_SECRET_KEY}
+  access-token-validity-in-milliseconds: 3600000 # 1 hour
+  refresh-token-validity-in-milliseconds: 1209600000 # 14 days

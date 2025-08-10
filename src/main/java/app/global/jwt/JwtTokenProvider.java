@@ -38,7 +38,7 @@ public class JwtTokenProvider implements InitializingBean {
 	private SecretKey key;
 
 	public JwtTokenProvider(
-		@Value("ElY-_7M10j7cjVccMGmijOjTIgerVICZBA3x0TIbMPQ=") String secret,
+		@Value("${jwt.secret}") String secret,
 		@Value("${jwt.access-token-validity-in-milliseconds}") long accessTokenValidityInMilliseconds,
 		@Value("${jwt.refresh-token-validity-in-milliseconds}") long refreshTokenValidityInMilliseconds) {
 		this.secret = secret;

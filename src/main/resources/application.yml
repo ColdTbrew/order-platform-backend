@@ -30,7 +30,7 @@ spring:
       api-key: ${OPENAI_API_KEY}
 
 jwt:
-  secret: ElY-_7M10j7cjVccMGmijOjTIgerVICZBA3x0TIbMPQ=
+  secret: ${JWT_SECRET_KEY}
   access-token-validity-in-milliseconds: 3600000 # 1 hour
   refresh-token-validity-in-milliseconds: 1209600000 # 14 days
 
