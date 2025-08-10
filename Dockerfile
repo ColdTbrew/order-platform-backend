@@ -3,8 +3,9 @@ FROM gradle:jdk17 AS builder
 WORKDIR /home/gradle/src
 COPY --chown=gradle:gradle build.gradle settings.gradle ./
 COPY --chown=gradle:gradle gradle ./gradle
+COPY --chown=gradle:gradle gradlew gradlew.bat ./
 COPY --chown=gradle:gradle src ./src
-RUN ./gradlew build -x test
+RUN chmod +x ./gradlew && ./gradlew build -x test
 
 # Stage 2: Create the final, lightweight image
 FROM eclipse-temurin:17-jre-jammy
