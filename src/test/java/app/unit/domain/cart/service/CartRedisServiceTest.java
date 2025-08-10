@@ -18,12 +18,14 @@ import org.springframework.data.redis.core.RedisTemplate;
 import app.domain.cart.model.dto.RedisCartItem;
 import app.domain.cart.service.CartRedisService;
 import app.global.apiPayload.exception.GeneralException;
-import app.global.config.TestAppConfig;
+
 
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
 
-@ContextConfiguration(classes = TestAppConfig.class)
+@SpringBootTest
 @org.springframework.test.context.ActiveProfiles("test")
+@TestPropertySource(properties = {"spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration"})
 class CartRedisServiceTest {
 
 	@Autowired
