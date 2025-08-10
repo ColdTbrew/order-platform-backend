@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
-import org.springframework.context.annotation.Import;
 
 import app.OrderPlatformBackendApplication;
 
@@ -13,7 +12,6 @@ import app.OrderPlatformBackendApplication;
 @EnableAutoConfiguration(exclude = {SecurityAutoConfiguration.class})
 @ComponentScan(basePackageClasses = OrderPlatformBackendApplication.class,
     excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class))
-@Import({RedisConfig.class, RedissonConfig.class})
 public class TestAppConfig {
     // This configuration will load the main application context but exclude SecurityConfig
 }
