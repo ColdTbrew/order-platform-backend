@@ -18,8 +18,11 @@ import org.springframework.data.redis.core.RedisTemplate;
 import app.domain.cart.model.dto.RedisCartItem;
 import app.domain.cart.service.CartRedisService;
 import app.global.apiPayload.exception.GeneralException;
+import app.global.config.TestAppConfig;
 
-@SpringBootTest
+import org.springframework.test.context.ContextConfiguration;
+
+@ContextConfiguration(classes = TestAppConfig.class)
 @org.springframework.test.context.ActiveProfiles("test")
 class CartRedisServiceTest {
 
