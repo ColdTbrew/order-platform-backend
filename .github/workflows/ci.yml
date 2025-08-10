@@ -20,9 +20,6 @@ jobs:
       SPRING_MAIN_ALLOW_BEAN_DEFINITION_OVERRIDING: true
       REDIS_PASSWORD: ''
       REDIS_REFUND_QUEUE: 'refund-queue-test'
-      TOSS_SECRET_KEY: ${{ secrets.TOSS_SECRET_KEY }}
-      TOSS_CLIENT_KEY: ${{ secrets.TOSS_CLIENT_KEY }}
-      TOSS_URL : ${{ secrets.TOSS_URL }}
     steps:
     - name: Checkout
       uses: actions/checkout@v4
