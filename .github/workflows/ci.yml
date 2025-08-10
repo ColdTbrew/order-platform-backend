@@ -36,6 +36,7 @@ jobs:
       
     - name: Build with Gradle
       env:
+        TOSS_SECRET_KEY: ${{ secrets.TOSS_SECRET_KEY }}
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: ./gradlew test -Dspring.data.redis.port=6379 -Dspring.data.redis.host=localhost
 
