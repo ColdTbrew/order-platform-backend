@@ -21,10 +21,6 @@ jobs:
           --health-retries 5
     env:
       SPRING_PROFILES_ACTIVE: test
-      SPRING_DATASOURCE_URL: jdbc:h2:mem:testdb
-      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.h2.Driver
-      SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATAsource_PASSWORD: ''
     steps:
     - name: Checkout
       uses: actions/checkout@v4
